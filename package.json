@@ -1,0 +1,14 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Godwin opara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
