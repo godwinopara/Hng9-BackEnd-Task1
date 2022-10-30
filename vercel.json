@@ -1,0 +1,10 @@
+{
+   "version": 2,
+   "name": "hng9-backend-task1",
+   "builds": [
+      { "src": "server.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/server.js" }
+   ]
+}
