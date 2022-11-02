@@ -16,7 +16,7 @@
 - [Express](http://flask.pocoo.org/) Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 ### Running the Server
-After successfully Installing nodejs
+After successfully Installing nodejs, On the root folder run the Below Commands to Install the neccessary Dependencies and Start the server
 
 ```bash
 // To install all dependencies
