@@ -12,4 +12,9 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(8000);
+app.post("/", (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
+});
+
+app.listen(5000);
