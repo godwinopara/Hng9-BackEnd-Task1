@@ -1,4 +1,5 @@
 const express = require("express");
+const apiCalculator = require("./Controllers/arithmetic");
 
 const app = express();
 app.use(express.json());
@@ -12,9 +13,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("/", (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
-});
+app.post("/", apiCalculator);
 
 app.listen(5000);
