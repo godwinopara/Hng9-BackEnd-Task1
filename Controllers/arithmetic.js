@@ -48,7 +48,7 @@ const apiCalculator = (req, res) => {
     operator = "multiplication";
   }
 
-  res.status(201).send({
+  res.status(200).send({
     slackUsername: "@godwinopara",
     result: Number(operationResult),
     operation_type: operator,
