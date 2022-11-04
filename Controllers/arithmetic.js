@@ -10,7 +10,7 @@ const apiCalculator = (req, res) => {
   // Convert the operation_type(String) into an array
   // So we can easily search for arithmetic words(e.g Addition, Substration e.t.c) from the array
   const formatedOperation_type = operation_type.split(" ");
-
+  let operator;
   let operationResult;
 
   // Check to see operation_type(String) that was converted to array
@@ -22,6 +22,7 @@ const apiCalculator = (req, res) => {
     // If it contains addition or add then we can add the values
     // sent along side the request
     operationResult = addition(x, y);
+    operator = "addition";
 
     // Check to see operation_type(String) that was converted to array
     // has an arithmetic words("subtract", "subtraction" or "minus")
@@ -33,6 +34,7 @@ const apiCalculator = (req, res) => {
     // If it contains "subtract","subtraction" or "minus" then we can subtract the values
     // sent along side the request
     operationResult = subtraction(x, y);
+    operator = "subtraction";
 
     // Check to see operation_type(String) that was converted to array
     // has an arithmetic words("multiply" or "multiplication")
@@ -43,13 +45,13 @@ const apiCalculator = (req, res) => {
     // If it contains multiply or multiplication then we can multiply the values
     // sent along side the request
     operationResult = multiplication(x, y);
+    operator = "multiplication";
   }
 
   res.status(201).json({
     slackUsername: "@godwinopara",
     result: operationResult,
-    operation_type,
-    formatedOperation_type,
+    operator,
   });
 };
 
