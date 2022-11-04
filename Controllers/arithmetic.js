@@ -51,7 +51,7 @@ const apiCalculator = (req, res) => {
   res.status(201).json({
     slackUsername: "@godwinopara",
     result: operationResult,
-    operator,
+    operator_type: operator,
   });
 };
 
